@@ -4,4 +4,5 @@ logs/
 target
 .syndicate
 task02/.syndicate-config-dev/
+task02/hello_world-test/target/
 syndicate.yml
