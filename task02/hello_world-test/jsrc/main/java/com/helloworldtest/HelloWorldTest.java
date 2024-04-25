@@ -10,8 +10,7 @@ import java.util.Map;
 
 @LambdaHandler(lambdaName = "hello_world-test",
 	roleName = "hello_world-test-role",
-	isPublishVersion = true,
-	aliasName = "${lambdas_alias_name}",
+	isPublishVersion = false,
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
 public class HelloWorldTest implements RequestHandler<Object, Map<String, Object>> {
