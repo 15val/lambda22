@@ -3,5 +3,5 @@ logs/
 .idea
 target
 .syndicate
-/.syndicate-config-dev/
+/task02/.syndicate-config-dev/
 syndicate.yml
