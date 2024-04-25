@@ -1,0 +1,19 @@
+{
+  "deploy_name": "hello-world-test",
+  "meta": {
+    "lambda": {
+      "hello_world-test": {
+        "runtime": "java",
+        "memory": 128,
+        "timeout": 3
+      }
+    },
+    "apigateway": {
+      "MyAPI": {
+        "path": "/hello",
+        "method": "GET",
+        "lambda": "hello_world-test"
+      }
+    }
+  }
+}
