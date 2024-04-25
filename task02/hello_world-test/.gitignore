@@ -4,3 +4,4 @@ logs/
 target
 .syndicate
 .syndicate-config-dev/
+syndicate.yml
