@@ -520,3 +520,126 @@ botocore.exceptions.ClientError: An error occurred (InvalidAccessKeyId) when cal
 2024-04-25 14:39:44,030 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
 2024-04-25 14:39:44,030 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
 2024-04-25 14:39:44,275 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:25:12,297 [INFO] USER:ой processor.py:143:_prepare_bucket_view LOG: Viewing complement, URIBucketView, has been found, setting up the raw data.
+2024-04-25 16:25:12,781 [ERROR] USER:ой helper.py:103:wrapper LOG: Error occurred: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.
+2024-04-25 16:25:12,788 [ERROR] USER:ой helper.py:104:wrapper LOG: Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\syndicate\connection\helper.py", line 89, in wrapper
+    return handler_func(*args, **kwargs)
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\syndicate\connection\s3_connection.py", line 83, in put_object
+    self.resource.Bucket(bucket).put_object(Body=file_obj,
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\boto3\resources\factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\boto3\resources\action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\botocore\client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\ой\AppData\Local\Programs\Python\Python39\lib\site-packages\botocore\client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.
+
+2024-04-25 16:25:54,005 [INFO] USER:ой processor.py:143:_prepare_bucket_view LOG: Viewing complement, URIBucketView, has been found, setting up the raw data.
+2024-04-25 16:25:54,459 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:25:54,459 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:25:54,698 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:25:54,698 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of deploy_name: hello-world-test
+2024-04-25 16:25:54,857 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:25:54,857 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:25:55,174 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:25:55,174 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of bundle_name: hello_world-test_240425.143831
+2024-04-25 16:25:55,360 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:25:55,360 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:25:55,599 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:25:55,838 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:25:55,839 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:25:56,112 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:25:56,238 [INFO] USER:ой deployment_processor.py:446:remove_deployment_resources LOG: Output file was loaded successfully
+2024-04-25 16:25:56,238 [INFO] USER:ой deployment_processor.py:450:remove_deployment_resources LOG: Prefixes and suffixes of any resource names have been resolved.
+2024-04-25 16:25:56,238 [INFO] USER:ой deployment_processor.py:481:remove_deployment_resources LOG: Going to clean AWS resources
+2024-04-25 16:25:56,239 [INFO] USER:ой deployment_processor.py:176:clean_resources LOG: Removing iam_role resources ...
+2024-04-25 16:25:58,274 [INFO] USER:ой iam_resource.py:82:_remove_role LOG: IAM role cmtr-8937b1b4-hello_world-test-role was removed.
+2024-04-25 16:25:58,275 [INFO] USER:ой deployment_processor.py:176:clean_resources LOG: Removing iam_policy resources ...
+2024-04-25 16:25:58,655 [INFO] USER:ой iam_resource.py:46:_remove_policy LOG: IAM policy cmtr-8937b1b4-lambda-basic-execution was removed.
+2024-04-25 16:25:58,656 [INFO] USER:ой deployment_processor.py:183:clean_resources LOG: Removing lambda resources ...
+2024-04-25 16:25:59,498 [INFO] USER:ой lambda_resource.py:1004:_remove_lambda LOG: Lambda cmtr-8937b1b4-hello_world-test was removed.
+2024-04-25 16:25:59,546 [WARNING] USER:ой bundle_processor.py:93:remove_failed_deploy_output LOG: Failed output file for deploy hello-world-test does not exist.
+2024-04-25 16:25:59,547 [INFO] USER:ой helper.py:336:timed LOG: Stage clean, elapsed time: 0:00:03.435027
+2024-04-25 16:25:59,674 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:25:59,675 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:00,085 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:00,086 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:00,332 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:05,895 [INFO] USER:ой processor.py:143:_prepare_bucket_view LOG: Viewing complement, URIBucketView, has been found, setting up the raw data.
+2024-04-25 16:26:06,326 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:06,326 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:06,619 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:06,619 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of deploy_name: hello-world-test
+2024-04-25 16:26:06,785 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:06,785 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:07,025 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:07,025 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of bundle_name: hello_world-test_240425.143831
+2024-04-25 16:26:07,185 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:07,185 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:07,437 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:07,720 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:07,720 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:07,980 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:08,026 [WARNING] USER:ой decorators.py:49:real_wrapper LOG: Output file already exists with name hello_world-test_240425.143831/outputs/hello-world-test.json. If it should be replaced with new one, use --replace_output flag.
+2024-04-25 16:26:08,222 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:26:08,222 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:26:08,483 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:26:44,632 [INFO] USER:ой processor.py:143:_prepare_bucket_view LOG: Viewing complement, URIBucketView, has been found, setting up the raw data.
+2024-04-25 16:26:45,098 [INFO] USER:ой helper.py:336:timed LOG: Stage test, elapsed time: 0:00:00.000999
+2024-04-25 16:26:45,147 [INFO] USER:ой project_state.py:331:_update_lambdas_from_path LOG: Going to resolve any lambda names from a given path: H:\IntellijIDEAprojects\AWS_course\lambda2\task02\hello_world-test\jsrc\main\java\com\helloworldtest.
+2024-04-25 16:26:45,147 [INFO] USER:ой project_state.py:335:_update_lambdas_from_path LOG: Going to add the following 'java' lambda:'hello_world-test' to the pending ProjectState.
+2024-04-25 16:26:45,148 [INFO] USER:ой project_state.py:331:_update_lambdas_from_path LOG: Going to resolve any lambda names from a given path: H:\IntellijIDEAprojects\AWS_course\lambda2\task02\hello_world-test\src\lambdas.
+2024-04-25 16:26:45,148 [INFO] USER:ой project_state.py:331:_update_lambdas_from_path LOG: Going to resolve any lambda names from a given path: H:\IntellijIDEAprojects\AWS_course\lambda2\task02\hello_world-test\app\lambdas.
+2024-04-25 16:26:45,148 [INFO] USER:ой project_state.py:331:_update_lambdas_from_path LOG: Going to resolve any lambda names from a given path: H:\IntellijIDEAprojects\AWS_course\lambda2\task02\hello_world-test\swagger_src.
+2024-04-25 16:26:45,196 [INFO] USER:ой java.py:30:assemble_java_mvn_lambdas LOG: Java sources are located by path: H:/IntellijIDEAprojects/AWS_course/lambda2/task02/hello_world-test/jsrc/main/java
+2024-04-25 16:26:45,196 [INFO] USER:ой java.py:31:assemble_java_mvn_lambdas LOG: Going to process java mvn project by path: H:/IntellijIDEAprojects/AWS_course/lambda2/task02/hello_world-test
+2024-04-25 16:27:14,880 [INFO] USER:ой java.py:44:assemble_java_mvn_lambdas LOG: Java mvn project was processed successfully
+2024-04-25 16:27:14,880 [INFO] USER:ой helper.py:336:timed LOG: Stage assemble_java_mvn, elapsed time: 0:00:29.685540
+2024-04-25 16:27:14,930 [INFO] USER:ой helper.py:336:timed LOG: Stage assemble_java_mvn, elapsed time: 0:00:29.735521
+2024-04-25 16:27:14,931 [INFO] USER:ой helper.py:336:timed LOG: Stage assemble, elapsed time: 0:00:29.785482
+2024-04-25 16:27:14,974 [INFO] USER:ой meta_processor.py:476:create_meta LOG: Bundle path: H:/IntellijIDEAprojects/AWS_course/lambda2/task02/hello_world-test/bundles/hello_world-test_240425.162644
+2024-04-25 16:27:15,223 [INFO] USER:ой helper.py:299:write_content_to_file LOG: H:\IntellijIDEAprojects\AWS_course\lambda2\task02\.syndicate-config-dev/bundles/hello_world-test_240425.162644\build_meta.json file was created.
+2024-04-25 16:27:15,224 [INFO] USER:ой helper.py:336:timed LOG: Stage package_meta, elapsed time: 0:00:00.250856
+2024-04-25 16:27:15,675 [INFO] USER:ой bundle_processor.py:185:upload_bundle_to_s3 LOG: Bundle was validated successfully
+2024-04-25 16:27:20,598 [INFO] USER:ой helper.py:336:timed LOG: Stage upload, elapsed time: 0:00:05.128733
+2024-04-25 16:27:20,642 [INFO] USER:ой helper.py:336:timed LOG: Stage build, elapsed time: 0:00:35.803722
+2024-04-25 16:27:26,825 [INFO] USER:ой processor.py:143:_prepare_bucket_view LOG: Viewing complement, URIBucketView, has been found, setting up the raw data.
+2024-04-25 16:27:27,274 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:27:27,274 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:27:27,551 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:27:27,551 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of deploy_name: hello-world-test
+2024-04-25 16:27:27,732 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:27:27,732 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:27:27,975 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:27:27,976 [INFO] USER:ой helper.py:240:resolve_default_value LOG: Resolved value of bundle_name: hello_world-test_240425.162644
+2024-04-25 16:27:28,158 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:27:28,158 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:27:28,411 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:27:28,649 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:27:28,649 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:27:28,892 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
+2024-04-25 16:27:29,163 [INFO] USER:ой deployment_processor.py:312:create_deployment_resources LOG: Prefixes and suffixes of any resource names have been resolved.
+2024-04-25 16:27:29,163 [INFO] USER:ой deployment_processor.py:345:create_deployment_resources LOG: Going to deploy AWS resources
+2024-04-25 16:27:29,564 [INFO] USER:ой deployment_processor.py:85:_process_resources LOG: Processing iam_policy resources
+2024-04-25 16:27:30,335 [INFO] USER:ой iam_resource.py:118:_create_policy_from_meta LOG: Created IAM policy cmtr-8937b1b4-lambda-basic-execution.
+2024-04-25 16:27:30,512 [INFO] USER:ой deployment_processor.py:85:_process_resources LOG: Processing iam_role resources
+2024-04-25 16:27:33,988 [INFO] USER:ой iam_resource.py:178:_create_role_from_meta LOG: Created IAM role cmtr-8937b1b4-hello_world-test-role.
+2024-04-25 16:27:33,988 [INFO] USER:ой deployment_processor.py:97:_process_resources LOG: Processing lambda resources
+2024-04-25 16:27:35,467 [ERROR] USER:ой helper.py:94:wrapper LOG: Retry on create_lambda. Error: An error occurred (InvalidParameterValueException) when calling the CreateFunction operation: The role defined for the function cannot be assumed by Lambda.
+2024-04-25 16:27:37,065 [ERROR] USER:ой helper.py:94:wrapper LOG: Retry on create_lambda. Error: An error occurred (InvalidParameterValueException) when calling the CreateFunction operation: The role defined for the function cannot be assumed by Lambda.
+2024-04-25 16:27:42,414 [INFO] USER:ой deployment_processor.py:348:create_deployment_resources LOG: AWS resources were deployed successfully
+2024-04-25 16:27:42,414 [INFO] USER:ой deployment_processor.py:351:create_deployment_resources LOG: Going to apply dynamic changes
+2024-04-25 16:27:42,414 [INFO] USER:ой deployment_processor.py:353:create_deployment_resources LOG: Dynamic changes were applied successfully
+2024-04-25 16:27:42,415 [INFO] USER:ой deployment_processor.py:355:create_deployment_resources LOG: Going to apply common tags
+2024-04-25 16:27:42,421 [INFO] USER:ой group_tagging_api_resource.py:61:apply_tags LOG: No tags are specified in config. Skipping...
+2024-04-25 16:27:42,422 [INFO] USER:ой deployment_processor.py:358:create_deployment_resources LOG: Going to create deploy output
+2024-04-25 16:27:42,682 [INFO] USER:ой bundle_processor.py:63:create_deploy_output LOG: Output file with name hello_world-test_240425.162644/outputs/hello-world-test.json has been created
+2024-04-25 16:27:42,682 [INFO] USER:ой deployment_processor.py:364:create_deployment_resources LOG: Deploy output for hello-world-test was created.
+2024-04-25 16:27:42,684 [INFO] USER:ой helper.py:336:timed LOG: Stage deploy, elapsed time: 0:00:13.590819
+2024-04-25 16:27:42,953 [INFO] USER:ой project_state.py:117:get_remote LOG: Unsafely loaded project state file from S3 bucket. The retrieved object has type: dict
+2024-04-25 16:27:42,953 [INFO] USER:ой project_state.py:122:get_remote LOG: Made ProjectState object from the dict loaded from S3 bucket
+2024-04-25 16:27:43,211 [INFO] USER:ой sync_processor.py:53:sync_project_state LOG: Project state file has been successfully synced
