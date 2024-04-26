@@ -26,18 +26,14 @@ import java.util.Map;
 public class HelloWorldTest implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
 	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent request, Context context) {
-		if ("/hello".equals(request.getPath())) {
+
 			Map<String, Object> resultMap = new HashMap<>();
 			resultMap.put("statusCode", 200);
 			resultMap.put("message", "Hello from Lambda");
 			return new APIGatewayProxyResponseEvent()
 					.withStatusCode(200)
 					.withBody(new Gson().toJson(resultMap));
-		} else {
-			return new APIGatewayProxyResponseEvent()
-					.withStatusCode(404)
-					.withBody("Not found");
-		}
+		
 	}
 }
 
